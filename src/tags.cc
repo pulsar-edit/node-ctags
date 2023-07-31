@@ -21,7 +21,7 @@ void Tags::Init(Local<Object> target) {
               newTemplate->GetFunction(context).ToLocalChecked());
 }
 
-NODE_MODULE(ctags, Tags::Init)
+NAN_MODULE_WORKER_ENABLED(ctags, Tags::Init)
 
 NAN_METHOD(Tags::New) {
   Tags *tags = new Tags(Local<String>::Cast(info[0]));
