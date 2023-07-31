@@ -1,6 +1,6 @@
 fs = require 'fs'
 path = require 'path'
-ctags = require '../lib/ctags'
+ctags = require '../src/ctags'
 
 describe 'ctags', ->
   tagsFile = null
